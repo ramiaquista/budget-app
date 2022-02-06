@@ -73,4 +73,4 @@ end
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
-gem 'image_processing', '~> 1.2'
+gem 'devise'
