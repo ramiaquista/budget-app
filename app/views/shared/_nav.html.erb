@@ -1,7 +1,7 @@
 <nav>
   <div class="nav-title-container">
     <%= button_to "<", categories_path, method: :get, class: "btn btn-light" %>
-    <h3 class="nav-title">Categories</h3>
+    <h3 class="nav-title"><%= @title %></h3>
     <%= button_to ">", categories_path, method: :get, class: "btn btn-light" %>
   </div>
 </nav>

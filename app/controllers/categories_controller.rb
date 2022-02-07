@@ -4,18 +4,24 @@ class CategoriesController < ApplicationController
   # GET /categories or /categories.json
   def index
     @categories = Category.includes(:user).where("user_id = #{current_user.id}")
+    @title = 'Categories'
   end
 
   # GET /categories/1 or /categories/1.json
-  def show; end
+  def show
+    @title = 'Category'
+  end
 
   # GET /categories/new
   def new
     @category = Category.new
+    @title = 'New category'
   end
 
   # GET /categories/1/edit
-  def edit; end
+  def edit
+    @title = 'Edit Category'
+  end
 
   # POST /categories or /categories.json
   def create
@@ -26,6 +32,7 @@ class CategoriesController < ApplicationController
         format.html { redirect_to category_url(@category), notice: 'Category was successfully created.' }
         format.json { render :show, status: :created, location: @category }
       else
+        @title = 'New category'
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @category.errors, status: :unprocessable_entity }
       end

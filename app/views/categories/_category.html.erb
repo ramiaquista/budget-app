@@ -1,21 +1,23 @@
 <div id="<%= dom_id category %>">
   <li class="categori-li-item">
   <%= image_tag category.icon %>
+  <div class="cat-card-container">
+  
   <div class="cat-details">
   <p>
-    <strong>Name:</strong>
-    <%= link_to category.name, category%>
+    Name: <%= link_to category.name, category_expenses_path(category.id) %>
   </p>
-  <p>
-    <strong>Total Amount:</strong>
+  <p class="cat-total-amount">
+    $
     <% @total = 0 %>
     <% category.expenses.each do |e| %> 
      <% @total += e.amount %>
     <% end %>
     <%= @total %>
-    <% @total = 0%> 
+    <% @total = 0%>
   </p>
   </div>
-  <%#<%= button_to "See Transactions", category_expenses_path(category.id), :method => "get" %>
+  <%= button_to "See Transactions", category_expenses_path(category.id), :method => "get", class: "btn btn-primary transactions-btn"%>
+  </div>
   </li>
 </div>
