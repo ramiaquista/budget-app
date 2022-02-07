@@ -1,12 +1,10 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Expenses</h1>
+<h1>Transactions</h1>
 
 <div id="expenses">
   <% @expenses.each do |expense| %>
     <%= render expense %>
     <p>
-      <%= link_to "Show this expense", category_expenses_path %>
+      <%= link_to "Show this expense", category_expense_path(:id => expense.id) %>
     </p>
   <% end %>
 </div>

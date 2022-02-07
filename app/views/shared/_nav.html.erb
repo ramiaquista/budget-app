@@ -1,10 +1,9 @@
-<nav class="flex">
+<nav class="navbar navbar-light bg-light">
   <div class="menu-container">
   <h3> Transactions App </h3>
   <ul>
     <li><%= link_to "Categories", categories_path %></li>
   </ul>
-  </div>
   <div class="user-data">
     <% if user_signed_in? %>
       <%= current_user.full_name%>
@@ -12,5 +11,6 @@
     <% else %>
       <span>Guest</span>
     <% end %>
+  </div>
   </div>
 </nav>
