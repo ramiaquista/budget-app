@@ -19,8 +19,7 @@ class ExpensesController < ApplicationController
 
   # POST /expenses or /expenses.json
   def create
-    @expense = Expense.new(expense_params)
-
+    @expense = Expense.new(expense_params.merge(user_id: current_user.id))
     respond_to do |format|
       if @expense.save
         format.html { redirect_to expense_url(@expense), notice: 'Expense was successfully created.' }
@@ -64,6 +63,6 @@ class ExpensesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def expense_params
-    params.require(:expense).permit(:name, :amount)
+    params.require(:expense).permit(:name, :amount, :category_ids)
   end
 end

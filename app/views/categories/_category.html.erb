@@ -1,7 +1,15 @@
 <div id="<%= dom_id category %>">
+  <li class="categori-li-item">
+  <%= image_tag category.icon %>
   <p>
     <strong>Name:</strong>
-    <%= category.name %>
-    <%= image_tag category.icon %>
+    <%= category.name %><br /><br />
+    <strong>Total Amount:</strong>
+    <% category.expenses.each do |e| %> 
+     <% @total += e.amount %>
+    <% end %>
+    <%= @total %>
+    <% @total = 0%>
   </p>
+  </li>
 </div>

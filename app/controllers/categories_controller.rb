@@ -3,7 +3,8 @@ class CategoriesController < ApplicationController
 
   # GET /categories or /categories.json
   def index
-    @categories = Category.all
+    @categories = Category.includes(:user).where("user_id = #{current_user.id}")
+    @total = 0
   end
 
   # GET /categories/1 or /categories/1.json
@@ -19,7 +20,7 @@ class CategoriesController < ApplicationController
 
   # POST /categories or /categories.json
   def create
-    @category = Category.new(category_params)
+    @category = Category.new(category_params.merge(user_id: current_user.id))
 
     respond_to do |format|
       if @category.save

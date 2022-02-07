@@ -22,6 +22,10 @@
   </div>
 
   <div>
+    <%= form.select :category_ids, options_from_collection_for_select(Category.all, :id, :name), :prompt => "Select Categories", :multiple => true %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>

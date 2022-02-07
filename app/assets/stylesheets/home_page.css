@@ -1,0 +1,12 @@
+.categori-li-item {
+  list-style-type: none;
+  display: flex;
+  border: 1px solid black;
+  width: auto;
+}
+
+.categori-li-item > img {
+  height: auto;
+  width: 20vw;
+  padding: 1vh;
+}
