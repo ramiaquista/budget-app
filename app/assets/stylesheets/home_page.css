@@ -1,12 +1,32 @@
+.home-page-title {
+  font-size: 2rem;
+  text-align: center;
+}
+
 .categori-li-item {
-  list-style-type: none;
   display: flex;
-  border: 1px solid black;
   width: auto;
+  list-style-type: none;
+  margin: 0 3vw 5vh 3vw;
+  padding: 1vh;
+  background-color: white;
 }
 
 .categori-li-item > img {
-  height: auto;
-  width: 20vw;
+  max-height: 15vh;
+  max-width: 15vh;
   padding: 1vh;
+}
+
+.cat-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.cat-details > p {
+  margin: 1vh;
+}
+
+.button_to {
+  text-align: center;
 }

@@ -1,17 +1,7 @@
-<nav class="navbar navbar-light bg-light">
-  <div class="menu-container">
-  <h3> Transactions App </h3>
-  <ul>
-    <li><%= link_to "Categories", categories_path %></li>
-  </ul>
-  <div class="user-data">
-    <% if user_signed_in? %>
-      <%= current_user.full_name%>
-      <%= button_to 'Logout', destroy_user_session_path, method: :delete %>
-    <% else %>
-      <span>Guest</span>
-    <% end %>
+<nav>
+  <div class="nav-title-container">
+    <%= button_to "<", categories_path, method: :get, class: "btn btn-light" %>
+    <h3 class="nav-title">Categories</h3>
+    <%= button_to ">", categories_path, method: :get, class: "btn btn-light" %>
   </div>
-  </div>
-  <%= button_to "Back", categories_path, method: :get %>
 </nav>

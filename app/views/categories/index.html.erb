@@ -1,9 +1,7 @@
-<h1>Categories</h1>
-
 <div id="categories">
   <% @categories.each do |category| %>
     <%= render category %>
   <% end %>
 </div>
 
-<%= button_to "New category", new_category_path, method: :get, class: "btn-primary" %>
+<%= button_to "New category", new_category_path, method: :get, class: "btn btn-success" %>
