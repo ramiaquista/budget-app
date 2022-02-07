@@ -6,6 +6,10 @@ class ExpensesController < ApplicationController
     @e = Expense.includes(:user).where("user_id = #{current_user.id} ")
     @current_category = Category.find(params[:category_id])
     @expenses = @current_category.expenses.load.order(created_at: :desc)
+    @total = 0
+    @expenses.each do |e|
+      @total += e.amount
+    end
   end
 
   # GET /expenses/1 or /expenses/1.json
@@ -24,7 +28,10 @@ class ExpensesController < ApplicationController
     @expense = Expense.new(expense_params.merge(user_id: current_user.id))
     respond_to do |format|
       if @expense.save
-        format.html { redirect_to category_expenses_path(category_id: @expense.category_ids), notice: 'Expense was successfully created.' }
+        format.html do
+          redirect_to category_expenses_path(category_id: @expense.category_ids),
+                      notice: 'Expense was successfully created.'
+        end
         format.json { render :show, status: :created, location: @expense }
       else
         format.html { render :new, status: :unprocessable_entity }

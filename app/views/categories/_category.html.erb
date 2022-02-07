@@ -3,14 +3,15 @@
   <%= image_tag category.icon %>
   <p>
     <strong>Name:</strong>
-    <%= link_to category.name, category_expenses_path(:category_id => category.id) %><br /><br />
+    <%= link_to category.name, category%><br /><br />
     <strong>Total Amount:</strong>
     <% @total = 0 %>
     <% category.expenses.each do |e| %> 
      <% @total += e.amount %>
     <% end %>
     <%= @total %>
-    <% @total = 0%>
+    <% @total = 0%> 
   </p>
+  <%= button_to "See Transactions", category_expenses_path(category.id), :method => "get" %>
   </li>
 </div>
