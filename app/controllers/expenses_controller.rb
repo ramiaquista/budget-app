@@ -3,7 +3,9 @@ class ExpensesController < ApplicationController
 
   # GET /expenses or /expenses.json
   def index
-    @expenses = Expense.all
+    @e = Expense.includes(:user).where("user_id = #{current_user.id} ")
+    @current_category = Category.find(params[:category_id])
+    @expenses = @current_category.expenses.load
   end
 
   # GET /expenses/1 or /expenses/1.json

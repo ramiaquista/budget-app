@@ -3,8 +3,9 @@
   <%= image_tag category.icon %>
   <p>
     <strong>Name:</strong>
-    <%= category.name %><br /><br />
+    <%= link_to category.name, category_expenses_path(:category_id => category.id) %><br /><br />
     <strong>Total Amount:</strong>
+    <% @total = 0 %>
     <% category.expenses.each do |e| %> 
      <% @total += e.amount %>
     <% end %>
