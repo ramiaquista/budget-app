@@ -18,6 +18,7 @@
   </p>
   </div>
   <%= button_to "See Transactions", category_expenses_path(category.id), :method => "get", class: "btn btn-primary transactions-btn"%>
+  <%= button_to " - Edit Category -", edit_category_path(category.id), :method => "get", class: "btn btn-secondary transactions-btn"%>
   </div>
   </li>
 </div>

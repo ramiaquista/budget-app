@@ -1,12 +1,18 @@
 <div id="<%= dom_id expense %>">
+  <li class="expense-li-item">
+  <div class="expense-data-container">
   <p>
     <strong>Name:</strong>
     <%= expense.name %>
   </p>
-
   <p>
     <strong>Amount:</strong>
     <%= expense.amount %>
   </p>
-
+  </div>
+  <hr/>
+  <div class="expense-btns-container">
+    <%= button_to "Show this expense", category_expense_path(:id => expense.id), method: :get, class: "btn btn-primary" %>
+  </div>
+  </li>
 </div>

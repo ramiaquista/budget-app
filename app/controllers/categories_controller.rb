@@ -46,6 +46,7 @@ class CategoriesController < ApplicationController
         format.html { redirect_to category_url(@category), notice: 'Category was successfully updated.' }
         format.json { render :show, status: :ok, location: @category }
       else
+        @title = 'Edit Category'
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @category.errors, status: :unprocessable_entity }
       end

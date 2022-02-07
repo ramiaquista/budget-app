@@ -10,22 +10,29 @@ class ExpensesController < ApplicationController
     @expenses.each do |e|
       @total += e.amount
     end
+    @title = 'Transactions'
   end
 
   # GET /expenses/1 or /expenses/1.json
-  def show; end
+  def show
+    @title = 'Transaction Details'
+  end
 
   # GET /expenses/new
   def new
     @expense = Expense.new
+    @title = 'New Transaction'
   end
 
   # GET /expenses/1/edit
-  def edit; end
+  def edit
+    @title = 'Edit Transactions'
+  end
 
   # POST /expenses or /expenses.json
   def create
     @expense = Expense.new(expense_params.merge(user_id: current_user.id))
+
     respond_to do |format|
       if @expense.save
         format.html do
@@ -34,6 +41,7 @@ class ExpensesController < ApplicationController
         end
         format.json { render :show, status: :created, location: @expense }
       else
+        @title = 'New Transaction'
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @expense.errors, status: :unprocessable_entity }
       end
@@ -50,6 +58,7 @@ class ExpensesController < ApplicationController
         end
         format.json { render :show, status: :ok, location: @expense }
       else
+        @title = 'Edit Transactions'
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @expense.errors, status: :unprocessable_entity }
       end
