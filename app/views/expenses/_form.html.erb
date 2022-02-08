@@ -24,7 +24,7 @@
     <%= form.text_field :amount, placeholder: "Transaction Amount"%>
   </div>
   <hr/>
-  <div>
+  <div class="options-container">
     <%= form.collection_check_boxes :category_ids, Category.includes(:user).where("user_id = #{current_user.id}"), :id, :name, :multiple => true %>
   </div>
   <hr/>

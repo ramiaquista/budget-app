@@ -147,3 +147,12 @@ hr {
 .t-details {
   justify-content: space-between;
 }
+
+.options-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.options-container > input {
+  margin-left: 2vh;
+}
