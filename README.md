@@ -4,6 +4,8 @@
 
 ![screenshot](./splash_screen.png)
 
+> Informative video about the application: [Demo-Video](https://www.loom.com/share/03f3569582f0456d8b0b284772a59e4c)
+
 ## Built With
 
 Ruby >= 3.0.0
@@ -16,9 +18,9 @@ Postgresql >= 12.0
 
 - To get a local copy of the repository please run the following commands on your terminal:
    ```
-   git clone https://github.com/ramiaquista/budget-app/tree/dev
+   git clone https://github.com/ramiaquista/budget-app
    ```
-- Go to the cloned directory with `cd recipe-app`
+- Go to the cloned directory with `cd budget-app`
 - Run `bundle install` to install the necessary packages
 - Install the `postgresql` database and all necessary dependencies (if you are on Ubuntu just run `sudo apt install postgresql postgresql-contrib`)
 - Run `rails db:create` to create the database locally or if already have one with the same name run `rails db:reset` instead
