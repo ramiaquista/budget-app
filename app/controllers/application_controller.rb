@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   before_action :update_allowed_parameters, if: :devise_controller?
 
   def after_sign_in_path_for(_resource)
@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_out_path_for(_resource)
-    new_user_session_path
+    root_path
   end
 
   def update_allowed_parameters

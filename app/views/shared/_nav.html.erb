@@ -10,8 +10,6 @@
       <% end %>
     <% end %>
     <h3 class="nav-title"><%= @title %></h3>
-        <%= link_to categories_path do %>
-      <i class="fa fa-sign-out" aria-hidden="true"></i>
-    <% end %>
+    <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-primary'%>
   </div>
 </nav>

@@ -1,0 +1,41 @@
+html {
+  font-family: sans-serif !important;
+}
+
+.log-in-container {
+  display: flex;
+  flex-direction: column;
+  margin: 5vh;
+  margin-top: 3vh;
+}
+
+.log-in-container > h2 {
+  text-align: center;
+  margin-bottom: 4vh;
+}
+
+.log-in-container #user_email {
+  margin-bottom: 3.2vh;
+}
+
+.log-in-container #user_full_name {
+  margin-bottom: 3.2vh;
+}
+
+.log-in-container #user_password {
+  margin-bottom: 3.2vh;
+}
+
+.log-in-container #user_password_confirmation {
+  margin-bottom: 3.2vh;
+}
+
+.log-in-btn {
+  margin-bottom: 3.2vh;
+  width: 100%;
+}
+
+.sign-up-btn {
+  margin-bottom: 3.2vh;
+  width: 100%;
+}

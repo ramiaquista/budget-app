@@ -75,4 +75,4 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 gem 'devise'
 
-gem "font-awesome-rails"
+gem 'font-awesome-rails'

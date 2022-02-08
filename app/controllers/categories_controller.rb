@@ -63,6 +63,8 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def splash_screen; end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
