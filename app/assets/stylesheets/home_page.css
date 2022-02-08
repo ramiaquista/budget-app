@@ -32,7 +32,6 @@
   align-items: flex-start;
 }
 
-
 .cat-details > p {
   margin: 1vh;
   margin-bottom: 0;
@@ -114,8 +113,9 @@ hr {
   flex-direction: column;
   width: auto;
   list-style-type: none;
-  margin: 0 3vw 5vh 3vw;
+  margin: 5vh 3vw 5vh 3vw;
   padding: 1vh;
+  padding-bottom: 2.5vh;
   background-color: white;
   border-radius: 0.5rem;
 }
@@ -137,4 +137,12 @@ hr {
 .new-category {
   width: 75% !important;
   padding: 2vh !important;
+}
+
+#category_1 {
+  margin-top: 3vh !important;
+}
+
+.t-details {
+  justify-content: space-between;
 }

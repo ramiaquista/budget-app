@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 
 html {
@@ -40,8 +41,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 2vw;
-  padding-right: 2vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
 }
 
 .nav-title {
@@ -58,4 +59,14 @@ header {
 
 .alert {
   margin: 0 !important;
+}
+
+.fa {
+  color: white;
+  font-size: 1.5rem !important;
+}
+
+.fa-arrow-down {
+  font-size: 1.2rem !important;
+  padding-left: 2vw;
 }

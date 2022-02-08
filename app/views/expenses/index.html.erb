@@ -1,5 +1,8 @@
+<header>
+    <%= render "shared/nav" %>
+</header>
 <div class="order-label">
-  <h4>Most Recents</h4>
+  <h4>Most Recents<i class="fa fa-arrow-down"></i></h4>
 </div>
 <div class="transaction-index-container">
   <h2>Total Amount: $ <%= @total %></h2>
@@ -13,4 +16,4 @@
   <% end %>
 </div>
 
-<%= button_to "New Transaction", new_category_expense_path, class: "btn btn-success new-transaction"%>
+<%= button_to "New Transaction", new_category_expense_path, method: :get, class: "btn btn-success new-transaction"%>
