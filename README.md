@@ -8,7 +8,7 @@
 
 ### Try it now! [Here](https://monesy-budget.herokuapp.com/)
 
-### Informative video about the application: [Demo-Video](https://www.loom.com/share/03f3569582f0456d8b0b284772a59e4c)
+### Informative video about the application: [Demo-Video](https://www.loom.com/share/c17cab47161849af86263325e0a03933)
 
 ## Built With
 
