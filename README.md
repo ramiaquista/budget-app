@@ -1,10 +1,14 @@
 # RoR Capstone Project: Monesy
 
-> A mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
+## Description
+
+### A mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
 ![screenshot](./splash_screen.png)
 
-> Informative video about the application: [Demo-Video](https://www.loom.com/share/03f3569582f0456d8b0b284772a59e4c)
+### Try it now! [Here](https://monesy-budget.herokuapp.com/)
+
+### Informative video about the application: [Demo-Video](https://www.loom.com/share/03f3569582f0456d8b0b284772a59e4c)
 
 ## Built With
 
