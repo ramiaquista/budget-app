@@ -1,0 +1,33 @@
+<div id="<%= dom_id expense %>">
+  <li class="expense-li-item">
+  <div class="expense-data-container">
+  <p>
+    <strong>Name:</strong>
+    <%= expense.name%>
+  </p>
+  <p class="expense-amount">
+    <strong>Amount: $ </strong>
+    <%= expense.amount %>
+  </p>
+  </div>
+  <hr/>
+  <% if @title == 'Transaction Details' %>
+    <div class="t-details d-flex">
+      <div class="expense-btns-container">
+        <%= button_to "Edit Transaction", edit_category_expense_path, method: :get, class: "btn btn-secondary" %>
+      </div>
+      <div class="expense-btns-container">
+        <%= button_to "Destroy this expense", @category_expenses, method: :delete, class: "btn btn-warning" %>
+      </div>
+    </div>
+    <hr/>
+    <div class="expense-btns-container">
+      <%= button_to "Back to Transactions", category_expenses_path, method: :get, class: "btn btn-primary" %>
+    </div>
+  <% else %>
+    <div class="expense-btns-container">
+      <%= button_to "Show this transaction", category_expense_path(:id => expense.id), method: :get, class: "btn btn-primary" %>
+    </div>
+  <% end %>
+  </li>
+</div>

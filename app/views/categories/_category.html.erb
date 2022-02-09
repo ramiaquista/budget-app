@@ -1,0 +1,29 @@
+<div id="<%= dom_id category %>">
+  <li class="categori-li-item">
+  <%= image_tag category.icon %>
+  <div class="cat-card-container">
+  
+  <div class="cat-details">
+  <p class="cat-name">
+    Name: <%= link_to category.name, category_expenses_path(category.id) %>
+  </p>
+  <p class="cat-total-amount">
+    $
+    <% @total = 0 %>
+    <% category.expenses.each do |e| %> 
+     <% @total += e.amount %>
+    <% end %>
+    <%= @total %>
+    <% @total = 0%>
+  </p>
+  </div>
+  <%= button_to "See Transactions", category_expenses_path(category.id), :method => "get", class: "btn btn-primary transactions-btn"%>
+  <%= button_to " - Edit Category -", edit_category_path(category.id), :method => "get", class: "btn btn-secondary transactions-btn"%>
+  <% if @title == 'Category' %>
+  <div>
+    <%= button_to "Delete this category", @category, method: :delete, class: "btn btn-warning transactions-btn" %>
+  </div>
+  <% end %>
+  </div>
+  </li>
+</div>

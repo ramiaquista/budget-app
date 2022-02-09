@@ -1,0 +1,15 @@
+<nav>
+  <div class="nav-title-container">
+    <% if @title == 'Categories'%>
+      <%= link_to categories_path do %>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      <% end %>
+    <% else %>
+      <%= link_to categories_path do %>
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+      <% end %>
+    <% end %>
+    <h3 class="nav-title"><%= @title %></h3>
+    <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-primary'%>
+  </div>
+</nav>

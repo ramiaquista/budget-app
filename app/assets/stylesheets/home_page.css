@@ -1,0 +1,158 @@
+.home-page-title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.categori-li-item {
+  display: flex;
+  width: auto;
+  list-style-type: none;
+  margin: 3vh 3vw 5vh 3vw;
+  padding: 1vh;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding-bottom: 5vh;
+}
+
+.categori-li-item > img {
+  max-height: 17vh;
+  max-width: 17vh;
+  padding: 1vh;
+}
+
+.cat-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cat-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cat-details > p {
+  margin: 1vh;
+  margin-bottom: 0;
+  font-weight: 600 !important;
+}
+
+.button_to {
+  text-align: center;
+}
+
+.transactions-btn {
+  font-size: 13px !important;
+  margin-left: 5px;
+  margin-top: 1.2vh;
+}
+
+.form-group {
+  background-color: white;
+  margin: 5vw;
+  padding: 5vw;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-group > div {
+  margin-bottom: 2.5vh;
+}
+
+.file-selector-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-selector {
+  max-width: 50vw;
+}
+
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 100%;
+  background-color: rgb(231, 231, 231);
+  height: 1px;
+}
+
+.order-label {
+  background-color: #3778c2;
+  border-radius: 0.5rem;
+  margin: 3vw;
+  margin-bottom: 4vh;
+  text-align: center;
+}
+
+.order-label > h4 {
+  font-size: 1rem !important;
+  color: white;
+  padding: 2vw;
+}
+
+.transaction-index-container {
+  background-color: white;
+  margin: 3vw;
+  margin-bottom: 4vh;
+  padding: 2vw;
+  border-radius: 0.5rem;
+}
+
+.transaction-index-container > h2 {
+  font-size: 1.35rem !important;
+  font-weight: 400;
+  text-align: center;
+}
+
+.expense-li-item {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  list-style-type: none;
+  margin: 5vh 3vw 5vh 3vw;
+  padding: 1vh;
+  padding-bottom: 2.5vh;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+.expense-data-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.expense-data-container > p {
+  margin-bottom: 0;
+}
+
+.new-transaction {
+  width: 75% !important;
+  padding: 2vh !important;
+}
+
+.new-category {
+  width: 75% !important;
+  padding: 2vh !important;
+  margin-top: 2vh !important;
+}
+
+#category_1 {
+  margin-top: 3vh !important;
+}
+
+.t-details {
+  justify-content: space-between;
+}
+
+.options-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.options-container > input {
+  margin-left: 2vh;
+}

@@ -1,0 +1,10 @@
+<header>
+    <%= render "shared/nav" %>
+</header>
+<div id="categories">
+  <% @categories.each do |category| %>
+    <%= render category %>
+  <% end %>
+</div>
+
+<%= button_to "New Category", new_category_path, method: :get, class: "btn btn-success new-category" %>
